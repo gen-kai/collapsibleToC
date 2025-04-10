@@ -10,17 +10,24 @@ ToCs created by this plugin are also fully optimized for mobile devices.
 - Download zipped plugin files from the releases page;
 - Install the plugin via the "Plugins" page in Publii;
 	- Open the "Plugins" page in Publii
+
 	![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/Plugins_page.png)
 	- Install the plugin
+
 	![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/Install_plugin.png)
 - Enable the plugin
 	- Open the "Tools & Plugins" page
+
 	![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/Tools&Plugins_page.png)
 	- Enable the plugin
+
 	![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/Enable_plugin.png)
 
 ## Usage
 Insert a paragraph text **`[toc]`** anywhere into your blog post and enjoy a beautiful and collapsible ToC.
+
 ![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/ToC_in_post.png)
+
 ![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/ToC_collapsed.png)
+
 ![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/ToC_expanded.png)
