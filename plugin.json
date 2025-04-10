@@ -1,0 +1,18 @@
+
+{
+  "name": "Collapsible Table of Contents",
+  "description": "Adds a collapsible Table of Contents to posts.",
+  "license": "GPL-3.0",
+  "author": "gen_kai",
+  "version": "1.0.0",
+  "minimumPubliiVersion": "0.46.0",
+  "scope": "site",
+  "assets": {
+    "front": [
+      "toc.js",
+      "toc.css"
+    ]
+  },
+  "config": []
+}
+    
