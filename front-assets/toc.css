@@ -21,7 +21,7 @@
 .open .more-less::after {
   content: 'Collapse';
 }
-.list.expand.open .more-less {
+.toc.expand.open .more-less {
   background: none;
 }
 ul {

@@ -25,7 +25,7 @@ class PostTableOfContents {
 
   // Method to add custom CSS files
   addStyles(rendererInstance) {
-    return `<link rel="stylesheet" href="${rendererInstance.siteConfig.domain}/media/plugins/customToC/toc.css" />`;
+    return `<link rel="stylesheet" href="${rendererInstance.siteConfig.domain}/media/plugins/collapsibleToC/toc.css" />`;
   }
 
 
@@ -33,7 +33,7 @@ class PostTableOfContents {
   addScripts(rendererInstance) {
     // Add jQuery and our script that implements the expand/collapse behaviour of the ToC
     let scripts = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>'
-    scripts += `<script src="${rendererInstance.siteConfig.domain}/media/plugins/customToC/toc.js"></script>`;
+    scripts += `<script src="${rendererInstance.siteConfig.domain}/media/plugins/collapsibleToC/toc.js"></script>`;
     
     return scripts;
   }
