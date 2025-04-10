@@ -1,7 +1,13 @@
-.toc.expand {
+#divTOC.expand {
   overflow: hidden;
   position: relative;
+  margin-bottom: 0px;
 }
+
+#divTOC.expand.open .more-less {
+  background: none;
+}
+
 .more-less {
   position: absolute;
   bottom: 0;
@@ -15,16 +21,11 @@
   cursor: pointer;
   color: var(--text-color)
 }
+
 .closed .more-less::after {
   content: 'See full';
 }
+
 .open .more-less::after {
   content: 'Collapse';
-}
-.toc.expand.open .more-less {
-  background: none;
-}
-ul {
-  padding-left: 10px;
-  margin-bottom: 5px;
 }

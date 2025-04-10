@@ -4,7 +4,7 @@
   "description": "Adds a collapsible Table of Contents to posts.",
   "license": "GPL-3.0",
   "author": "gen_kai",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "minimumPubliiVersion": "0.46.0",
   "scope": "site",
   "assets": {

@@ -15,7 +15,7 @@ class PostTableOfContents {
 
   addModifiers() {
     // Use the addModifier method to modify the post text
-    this.API.addModifier('postText', this.customToC, 1, this);
+    this.API.addModifier('postText', this.customTOC, 1, this);
   }
 
 
@@ -39,7 +39,7 @@ class PostTableOfContents {
   }
 
 
-  customToC(rendererInstance, text) {
+  customTOC(rendererInstance, text) {
     // Define all vars to find headings (h2, h3) in the text
     const headingRegex = /<(h[2-3])[^>]*>(.*?)<\/\1>/g;
     const headings = [];
@@ -65,9 +65,9 @@ class PostTableOfContents {
 
 
     // Create the Table of Contents
-    let toc = '<div class="post__toc toc">';
-    toc += '<h3>Table of Contents</h3>';
-    toc += '<ul>';
+    let toc = '<div id="divTOC" class="post__toc">';
+    toc += '<h3 id="h3TOC">Table of Contents</h3>';
+    toc += '<ul id="ulTOC" class="toc">';
 
     for(let counter = 0; counter < headings.length; counter++) {
       let element = headings[counter];

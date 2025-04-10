@@ -1,25 +1,27 @@
-var toc = $(".toc");
+var div = $("#divTOC");
+var h3 = $("#h3TOC");
+var ul = $("#ulTOC");
 var span = $(".more-less")
-var spanHeight = span[0].scrollHeight
-var fullHeight = toc[0].scrollHeight + 2*spanHeight;
+var spanHeight = span.outerHeight(true);
+var divFullHeight = h3.outerHeight(true) + ul.outerHeight(true) + spanHeight;
 
 
-if (toc.height() > 300) {
-  toc.addClass("expand closed");
-  toc.height(300 + spanHeight);
+if (div.height() > 300) {
+  div.addClass("expand closed");
+  div.height(300 + spanHeight);
 } else {
   span.remove();
 }
 
 $(".more-less").on("click", function() {  
-  if(toc.hasClass("closed")) {
-    toc.animate({
-      height: fullHeight
+  if(div.hasClass("closed")) {
+    div.animate({
+      height: divFullHeight
     }, 200);
-  } else if (toc.hasClass("open")) {
-    toc.animate({
+  } else if (div.hasClass("open")) {
+    div.animate({
       height: 300 + spanHeight
     }, 200);
   }
-  toc.toggleClass("open closed");
+  div.toggleClass("open closed");
 });
