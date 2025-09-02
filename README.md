@@ -24,7 +24,7 @@ ToCs created by this plugin are also fully optimized for mobile devices.
 	![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/Enable_plugin.png)
 
 ## Usage
-Insert a paragraph text **`[toc]`** anywhere into your blog post and enjoy a beautiful and collapsible ToC.
+Enable plugin, generate a standard ToC in the post editor and enjoy a beautiful and collapsible ToC upon the site generation.
 
 ![](https://github.com/gen-kai/collapsibleToC/raw/main/readme_assets/ToC_in_post.png)
 
