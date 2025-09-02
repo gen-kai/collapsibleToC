@@ -48,12 +48,20 @@ class PostTableOfContents {
 
     // Collect all headings and their positions
     while ((match = headingRegex.exec(text)) !== null) {
+      if (match[2].includes("Table of Contents"))
+      {
+        continue;
+      }
+
+
       const tag = match[1];
       const content = match[2];
       const id = `toc-${headings.length}`;
 
+
       // Add ID to heading for anchor linking
       text = text.replace(match[0], `<${tag} id="${id}">${content}</${tag}>`);
+
 
       // Add heading data to the array to build the ToC later
       headings.push({ tag, content, id });
@@ -61,7 +69,10 @@ class PostTableOfContents {
 
 
     // If no headings found, return original text
-    if (headings.length === 0) return text;
+    if (headings.length === 0)
+    {
+      return text;
+    }
 
 
     // Create the Table of Contents
@@ -73,10 +84,14 @@ class PostTableOfContents {
       let element = headings[counter];
       let previousElement = headings[counter-1]
 
-      if (element["tag"] === 'h2') { // If the element is h2
-        if (counter !== 0) { // All elements except for the first
+
+      if (element["tag"] === 'h2')
+      { // If the element is h2
+        if (counter !== 0)
+        { // All elements except for the first
           // Close the sublist if the previous heading was h3
-          if(previousElement["tag"] === "h3") {
+          if (previousElement["tag"] === "h3")
+          {
             toc += '</ul>';
           }
 
@@ -85,9 +100,12 @@ class PostTableOfContents {
         }
 
         toc += `<li class="toc-h2"><a href="#${element["id"]}">${element["content"]}</a>`;
-      } else if (element["tag"] === 'h3') { // If the element is h3
-        if (counter !== 0) { // All elements except for the first
-          if (previousElement["tag"] === "h2") {
+      } else if (element["tag"] === 'h3')
+      { // If the element is h3
+        if (counter !== 0)
+        { // All elements except for the first
+          if (previousElement["tag"] === "h2")
+          {
             toc += '<ul>';
           }
         }
@@ -101,9 +119,11 @@ class PostTableOfContents {
     toc += '</div>';
 
 
-    // Look for a placeholder [toc] and replace it
-    if (text.includes('<p>[toc]</p>')) {
-      text = text.replace('<p>[toc]</p>', toc);
+    // Look for a ToC and replace it
+    if (text.includes('<div class="post__toc">'))
+    {
+      let regex = /<div class="post__toc">.*?<\/div>/s;
+      text = text.replace(regex, toc);
     }
 
 

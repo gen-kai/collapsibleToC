@@ -1,11 +1,11 @@
 
 {
   "name": "Collapsible Table of Contents",
-  "description": "Adds a collapsible Table of Contents to posts.",
+  "description": "Swaps the standard ToC with the collapsible one.",
   "license": "GPL-3.0",
   "author": "gen_kai",
-  "version": "1.0.5",
-  "minimumPubliiVersion": "0.46.0",
+  "version": "1.1.0",
+  "minimumPubliiVersion": "0.0.0",
   "scope": "site",
   "assets": {
     "front": [
